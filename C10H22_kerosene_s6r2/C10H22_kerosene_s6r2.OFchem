@@ -1,0 +1,44 @@
+elements        List<word> 
+4
+(
+H
+O
+C
+N
+)
+;
+
+species         List<word> 
+6
+(
+O2
+KERO
+CO
+CO2
+H2O
+N2
+)
+;
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleArrheniusReaction;
+        reaction        "KERO^0.55 + 10O2^0.9 = 10CO + 10H2O";
+        A               3.573468737e+10;
+        beta            0;
+        Ta              20882.43641;
+    }
+    un-named-reaction-1
+    {
+        type            reversibleArrheniusReaction;
+        reaction        "CO + 0.5O2 = CO2";
+        A               1423024947;
+        beta            0;
+        Ta              10063.82478;
+    }
+}
+
+Tlow            300;
+Thigh           5000;
